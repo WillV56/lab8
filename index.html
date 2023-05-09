@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage and Session Storage</h1>
+
+    <button id="showName">Show Name (Local Storage)</button>
+
+    <button id="showName2">Show Name 2 (Session Storage)</button>
+
+    <script>
+        let myName = localStorage.setItem("name", "WillV");
+
+        document.getElementById('showName').addEventListener('click', e => {
+            alert(localStorage.getItem('name'))
+        });
+
+        let myName2 = sessionStorage.setItem("name2", "WVetter");
+         
+        document.getElementById('showName2').addEventListener('click', e => {
+            alert(sessionStorage.getItem('name2'))
+        });
+    </script>
+</body>
+</html>
